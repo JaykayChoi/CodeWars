@@ -15,16 +15,6 @@
 
 typedef long long long_t;
 
-template <typename T> void printVector(std::vector<T> v)
-{
-    std::cout << "{ ";
-    for (auto x : v)
-    {
-        std::cout << x << " ";
-    }
-    std::cout << "}" << std::endl;
-}
-
 // My solution.
 long_t nextBigger(long_t n)
 {
@@ -103,7 +93,6 @@ int main()
 // Best solutions.
 long nextBigger2(long n)
 {
-
     std::string str = std::to_string(n);
     return std::next_permutation(str.begin(), str.end()) ? std::stol(str) : -1;
 }
